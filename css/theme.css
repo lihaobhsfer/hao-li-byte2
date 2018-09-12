@@ -1,0 +1,14 @@
+#iframe{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#img{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+p, li{
+	font-size: 1.6em;
+}
