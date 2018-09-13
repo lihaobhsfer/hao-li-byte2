@@ -46,29 +46,54 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+        <p>This is a brief summary about the quality of the data set</p>
+        <p>Data Source: <a href="https://collegescorecard.ed.gov/data/">U.S. Department of Education College Scorecard Data</a></p>
+        <p>Documentation: <a href="https://collegescorecard.ed.gov/assets/FullDataDocumentation.pdf">link to data documentation PDF here</a></p>
+        <p>The College Scorecard project is designed to increase transparency, putting the power in the hands of students and families to compare how well individual postsecondary institutions are preparing their students to be successful.</p>
+      	<p>This project provides data to help students and families compare college costs and outcomes as they weigh the tradeoffs of different colleges, accounting for their own needs and educational goals.</p>
+      	<p>These data provide insights into the performance of institutions that receive federal financial aid dollars, and the outcomes of the students of those institutions.</p>
+      	<p>(Data Documentation, pp.2)</p>
+      	<p>Judging from the source, the data is accountable.</p>
+      
+      
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<p>As for completeness, it is necessary to divide the metric into several aspects.</p>
+	<ul>
+		<li>Type of information: Yes. According to the documentation, a total of 1837 variables collected in the complete dataset. 
+		In this recent cohort dataset, 137 of them were listed, such as basic information about institution (id, location, url, degree type, etc.), admission rate, average SAT scores, student body, family income, finatial aid and so on. 
+		These could provide significant help while diciding tradeoffs among schools</li>
+		<li>Missing Data: Many. Only 16% of the schools have SAT, ACT score information. And a large percentage of degrees offered are missing. Also, due to privacy issues, some information regarding finacial situation are not available.</li>
+	</ul>
+	<p>Overall, though the dataset collects many kinds of information, a large part of it is missing values. As a result, it is reasonable to say the dataset has poor completeness.</p>
+	<p>The reason of the poor completeness, however, is so far unclear. Does most of the colleges not require an SAT or ACT scores? Or they didn't report to the Department of Education? 
+	Due to lack of time, it is hard to give a deeper investigation.</p>
+
+
       </div>
       
       <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
+	<p>Yes. After a simple cleaning of the dataset in Wrangler, which involves eliminating null values in SAT, changing column types, I got reasonable distributions from most of the columns. </p>
+	<p>For example, one should expect the average SAT scores to have a normal distribution across schools. The result is close, as the figure below shows:</p>
+	<div class="img"><img src="https://lihaobhsfer.cn/ids/byte2-sat-avg.jpg" alt="SAT average score distribution" width="400px"/></div>
       </div>
 
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	<p>Judging from the source, and the type of information it tries to collect, I am confident to say that the dataset have high correctness.</p>
+	<p>Most of the information come from standard tests and finantial data. One would expect SAT and ACT score to have minimum bias. 
+	For self-reported finantial information such as family income range, of which the errors could be regard as random, there is also not much room for bias.</p>
       </div>
-
+      
+      <h2>What I learned from this process:</h2>
+    <ul>
+      <li>Without a specific question to ask, I haven't arrived at any discovery or conclusion.</li>
+      <li>With a introductory background in eudcational statistics, I am familiar with SPSS and am able to inteprate common statistic analysis results.</li>
+	</ul>
     </div> <!-- /container -->
 
 
